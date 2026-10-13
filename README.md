@@ -5,16 +5,21 @@ A world clock for the Omarchy bar, with a meeting-planner panel in the
 against the hours of a day, so "when can we all talk?" is answered at a
 glance instead of with mental arithmetic.
 
-| Light theme | Dark theme |
-|---|---|
-| ![The bar in a light theme](screenshots/light-bar.png) | ![The bar in a dark theme](screenshots/dark-bar.png) |
-| ![The panel in a light theme](screenshots/light-panel.png) | ![The panel in a dark theme](screenshots/dark-panel.png) |
+**The bar** — a chosen city's time instead of local (the built-in clock
+already owns local), with the city's name:
 
-The bar label shows a chosen city's time rather than local (the built-in
-clock already owns local) — above, Brisbane's time in the bar's center
-section. The panel is the meeting planner: cities as rows, the day's hours
-as shaded columns, hover to line everyone up. Both re-tint live with
-`omarchy theme set`.
+| Light | Dark |
+|---|---|
+| <img src="screenshots/light-bar.png" width="440" alt="The bar label showing Brisbane 04:45 in a light theme"> | <img src="screenshots/dark-bar.png" width="440" alt="The bar label showing Brisbane 04:46 in a dark theme"> |
+
+**The panel** — cities as rows, the day's hours as columns shaded by what
+that hour is in each city; hover a column to line everyone up:
+
+| Light | Dark |
+|---|---|
+| <img src="screenshots/light-panel.png" width="443" alt="The meeting-planner panel in a light theme"> | <img src="screenshots/dark-panel.png" width="443" alt="The meeting-planner panel in a dark theme"> |
+
+Both re-tint live with `omarchy theme set`.
 
 ## The bar label
 
