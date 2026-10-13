@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.captainawesomedi.omaclock",
+  "name": "Omaclock",
+  "version": "1.0.0",
+  "author": "CaptainAwesomeDi",
+  "license": "MIT",
+  "description": "World clock bar label with a meeting-planner panel: cities against the hours of a day, business hours shaded, hover to line everyone up.",
+  "kinds": ["bar-widget"],
+  "entryPoints": { "barWidget": "BarWidget.qml" },
+  "barWidget": {
+    "displayName": "Omaclock",
+    "description": "A worldtimebuddy-style meeting planner behind the bar clock: saved cities as rows, the day's hours as columns, business hours shaded — hover a column to read what it is everywhere at once.",
+    "category": "Time",
+    "allowMultiple": false,
+    "defaultSection": "center",
+    "defaults": {
+      "zones": ["Europe/London", "America/New_York", "Asia/Tokyo"],
+      "businessStart": 9,
+      "businessEnd": 18,
+      "use24h": true,
+      "barZone": "saved",
+      "barShowCity": true
+    },
+    "schema": [
+      {
+        "key": "zones",
+        "type": "multiselect",
+        "label": "Cities",
+        "noSelectionText": "Local time only",
+        "placeholderText": "Search cities…",
+        "emptyText": "No matching city"
+      },
+      {
+        "key": "barZone",
+        "type": "string",
+        "label": "Bar label zone",
+        "description": "\"saved\" follows the first saved city; \"\" or \"local\" shows local time; otherwise a zone id. Cycle from the panel's Bar chip.",
+        "defaultValue": "saved"
+      },
+      {
+        "key": "barShowCity",
+        "type": "boolean",
+        "label": "Show city name on the bar",
+        "defaultValue": true
+      },
+      {
+        "key": "businessStart",
+        "type": "integer",
+        "label": "Business hours start",
+        "min": 0,
+        "max": 23,
+        "step": 1,
+        "defaultValue": 9
+      },
+      {
+        "key": "businessEnd",
+        "type": "integer",
+        "label": "Business hours end",
+        "min": 1,
+        "max": 24,
+        "step": 1,
+        "defaultValue": 18
+      },
+      {
+        "key": "use24h",
+        "type": "boolean",
+        "label": "24-hour times",
+        "defaultValue": true
+      }
+    ]
+  }
+}
